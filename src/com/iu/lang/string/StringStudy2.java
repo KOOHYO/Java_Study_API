@@ -9,8 +9,11 @@ public class StringStudy2 {
 		//파일이 이미지파일인지 아닌지 구별
 		//확장자가 jpg, png, gif, jpeg
 		//이미지파일이면 이미지파일입니다 아니면 이미지파일이 아닙니다출력
+		String [] files = {"jpg", "png", "gif", "jpeg"};
+		String result = "이미지파일이 아닙니다";
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("파일명을 쓰시오");
+		
 		String jpg = "jpg";
 		String png = "png";
 		String gif = "gif";
@@ -18,10 +21,15 @@ public class StringStudy2 {
 		String fileName = scanner.next();//파일명을 입력 받음
 		int count = 0;//점을 찾을 인덱스 번호
 		//.이후로 jpg, png, gif, jpeg가 오면 된다
-		count = fileName.indexOf('.', 0);//.의 인덱스번호찾기
-		System.out.println(count);
+		count = fileName.lastIndexOf('.');//.의 인덱스번호찾기
 		String image = fileName.substring(count+1);//.기준으로 부터 뒷부분을 따로 출력
-		System.out.println(image);
+		
+		for(int i=0; i<files.length; i++) {
+			if(fileName.equals(files[i])) {
+				result = "이미지 파일입니다";
+				break;
+			}
+		}
 		
 		if(image.equals(jpg) || image.equals(png) || image.equals(gif) || image.equals(jpeg)) {
 			System.out.println("이미지 파일 입니다");
