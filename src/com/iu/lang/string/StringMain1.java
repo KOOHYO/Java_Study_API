@@ -28,7 +28,14 @@ public class StringMain1 {
 		System.out.println("=================");
 		ss2.studySubString();
 		System.out.println("=================");
-		ss2.ex2();
+//		ss2.ex2();
+		System.out.println("=================");
+		StringStudy3 s3 = new StringStudy3();
+		s3.studySplit();
+		System.out.println("=================");
+		s3.studySplit2();
+		System.out.println("=================");
+		s3.studySplit3();
 
 	}
 
