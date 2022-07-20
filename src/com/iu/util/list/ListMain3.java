@@ -10,10 +10,9 @@ public class ListMain3 {
 		WorkerDTO workerDTO = new WorkerDTO();
 		WorkerDTO workerDTO2 = new WorkerDTO();
 		
-		ArrayList<String> arrayList = new ArrayList<>();
-		arrayList.add(null);
-		arrayList.add(null);
-		arrayList.add(null);
+		ArrayList<WorkerDTO> arrayList = new ArrayList<>();
+		arrayList.add(workerDTO);
+		arrayList.add(workerDTO2);
 
 	}
 
