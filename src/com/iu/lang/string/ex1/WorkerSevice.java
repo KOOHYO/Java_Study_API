@@ -1,5 +1,7 @@
 package com.iu.lang.string.ex1;
 
+import java.util.StringTokenizer;
+
 import javax.print.attribute.standard.RequestingUserName;
 
 public class WorkerSevice {
@@ -28,18 +30,22 @@ public class WorkerSevice {
 		String newInfo = sb.toString().replace(',', '-');
 		//newInfo = sb.toString().replace(" ", ""); 이것이 왜 안됄까?
 		
-		String [] infos = newInfo.split("-");
+		StringTokenizer newInfos = new StringTokenizer(newInfo, "-");
+		System.out.println(newInfos.countTokens());
 		
-		WorkerDTO [] workerdtos = new WorkerDTO[infos.length/4];
+/*		//String [] infos = newInfo.split("-");
+		
+		//WorkerDTO [] workerdtos = new WorkerDTO[infos.length/4];
 		//i = 0, 1, 2, 3
-		for(int i=0; i<infos.length; i++) {
+		//for(int i=0; i<infos.length; i++) {
 			
-			WorkerDTO workerdto = new WorkerDTO();
-			workerdtos[i/4]=workerdto;
-			workerdto.setName(infos[i].trim());			 //4, 8
-			workerdto.setDepartment(infos[++i].trim());  //5, 9
-			workerdto.setJob(infos[++i].trim());		 //6, 10
-			workerdto.setPhone(infos[++i].trim());		 //7, 11
+//			WorkerDTO workerdto = new WorkerDTO();
+//			workerdtos[i/4]=workerdto;
+//			workerdto.setName(infos[i].trim());			 //4, 8
+//			workerdto.setDepartment(infos[++i].trim());  //5, 9
+//			workerdto.setJob(infos[++i].trim());		 //6, 10
+//			workerdto.setPhone(infos[++i].trim());		 //7, 11
+*/		
 		}
 		
 		return workerdtos;
