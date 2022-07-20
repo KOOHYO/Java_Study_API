@@ -33,7 +33,7 @@ public class WrapperEx1 {
 	}
 	
 	private void season(String num) {
-		String month = num.substring(2, 4);
+		String month = num.substring(2, 4);//num을 다시 활용해도된다 왜냐하면 밑에 다시 쓸 일이 없기때문에
 		int season = Integer.parseInt(month);
 		if(3<=season && season<=5) {
 			System.out.println("봄");
@@ -50,8 +50,8 @@ public class WrapperEx1 {
 	}
 	
 	private void age(String num) {
-		char ch = num.charAt(7);
-		String year =num.substring(0, 2);
+		char ch = num.charAt(7);//1900년도인지 2000년도인지 체크하기위해 꺼내옴
+		String year =num.substring(0, 2);//
 		int year2 =Integer.parseInt(year);
 		int age = 0;
 		if(ch=='1'||ch=='2') {

@@ -7,6 +7,7 @@ public class WrapperEx2 {
 	//jumincheck
 	//주민번호 입력
 	//	9	7	1	1	2	4	-	1	2	3	4	5	6	7(체크용번호)
+	//	0	1	2	3	4	5		0	1	2	3	4	5
 	//*	2	3	4	5	6	7		8	9	2	3	4	5	
 	//	18	21	4	5	12	20		8	18	6	12	20	30
 	//	총합 : 192
@@ -23,18 +24,58 @@ public class WrapperEx2 {
 	//	맞으면 주민번호 틀리면 이상한 주민번호
 	
 	public void jumincheck() {
-//		Scanner scanner = new Scanner(System.in);
+//		Scanner scanner = new Scanner(System.in);//멤버변수로 해도되고 지역변수로 해도된다. 다른메서드에서도 사용할꺼면 멤버변수로!
 //		String num = scanner.next();
 		String num = "971124-1234567";
-		this.jumintotal(num);
+		int count=2;
+		int sum=0;//곱하기한 결과물을 더하려고하는 변수
+		for(int i=0; i<num.length()-1; i++);{
+			//1. substring()  : String
+			//String age = num.substring(0, i+1);//1, 2
+			//int n = Integer.parseInt(age);
+			//2. charAt()	  : char
+			//char ch = num.charAt(0);//1, 2, 3...
+			//String num = String.valueOf(ch);
+			//int n = Integer.parseInt(num);
+			
+			if(i==6) {
+				continue;
+			}
+			
+			int n = Integer.parseInt(String.valueOf(num.charAt(i)));//위에것을 합치면 변수는 적게 쓸 수 있다.
+			
+			sum = sum + n*count;
+			count++;
+//		내가 쓴 코드
+//		int jumintotal = 0;
+//		String age = num.substring(0, 6);//971124
+//		String gender = num.substring(7, 13);//123456
+//		char agec = age.charAt(0);
+//		char genderc = gender.charAt(0);
+//		for(int i=0; i<age.length(); i++) {
+//			agec = age.charAt(i);
+//			System.out.println(agec);
+//		
+//		
+//		}
+		}
 		
-	}
-	
-	public void jumintotal(String num) {
-		int jumintotal = 0;
-		String age = num.substring(0, 6);//971124
-		String gender = num.substring(7, 13);//123456
-		//for()
+		int check = sum%11; //나머지하는 연산자 %
+		
+		check = 11-check;
+		
+		if(9<check) {
+			check = check%10;
+		}
+		
+		//check용 번호
+		int checkNum = Integer.parseInt(String.valueOf(num.charAt(num.length()-1)));
+		
+		if(check == checkNum) {
+			System.out.println("정상 주민번호");
+		}else {
+			System.out.println("비정상 주민번호");
+		}
 		
 	}
 	
