@@ -29,7 +29,7 @@ public class WrapperEx2 {
 		String num = "971124-1234567";
 		int count=2;
 		int sum=0;//곱하기한 결과물을 더하려고하는 변수
-		for(int i=0; i<num.length()-1; i++);{
+		for(int i=0; i<num.length()-1; i++){
 			//1. substring()  : String
 			//String age = num.substring(0, i+1);//1, 2
 			//int n = Integer.parseInt(age);
