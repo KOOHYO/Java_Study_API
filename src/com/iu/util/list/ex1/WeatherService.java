@@ -54,7 +54,7 @@ public class WeatherService {
 		
 	}
 	
-	public void add(ArrayList<CityDTO> cityDTOs) {
+	public boolean add(ArrayList<CityDTO> cityDTOs) {
 		CityDTO cDto = new CityDTO();
 		System.out.println("지역을 입력해 주세요");
 		cDto.setName(sc.next());
@@ -64,7 +64,7 @@ public class WeatherService {
 		cDto.setHum(sc.nextInt());
 		System.out.println("지역의 상태를 입력해 주세요");
 		cDto.setStatus(sc.next());
-		cityDTOs.add(cDto);
+		return cityDTOs.add(cDto);
 		
 	}
 	
@@ -80,7 +80,7 @@ public class WeatherService {
 				break;//반복문 종료 break;
 			}
 		}
-		retuern flag;
+		return flag;
 	}
 	
 	public CityDTO find(ArrayList<CityDTO> cityDTOs) {

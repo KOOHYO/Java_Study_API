@@ -46,13 +46,22 @@ public class WeatherController {
 				}else {
 					wView.view("일치하는 지역이 없습니다");
 				}
-
 			}else if(num == 4) {
 				System.out.println("지역정보를 추가 하겠습니다");
-				wService.add(cityDTOs);
+				boolean flag = wService.add(cityDTOs);
+				String message = "추가를 실패하였습니다";
+				if(flag) {
+					message = "추가를 성공하였습니다";
+				}
+				wView.view(message);
 			}else if(num == 5) {
 				System.out.println("지역정보를 삭제 하겠습니다");
-				wService.remove(cityDTOs);
+				boolean flag = wService.remove(cityDTOs);
+				String message = "삭제를 실패하였습니다";
+				if(flag) {
+					message = "삭제를 성공하였습니다";
+				}
+				wView.view(message);
 			}else if(num == 6){
 				System.out.println("프로그램을 종료합니다");
 				break;
