@@ -26,11 +26,14 @@ public class MapMain {
 		System.out.println(check);
 		
 		Set<String> set = map.keySet();
+		
+		//2. map안에 데이터를 꺼내는 방법
 		Iterator<String> it = set.iterator();//보라색 I는 인터페이스, 초록색C는 클래스 (A가 붙어있으면 엡스트랙(추상) 클래스)
 		while(it.hasNext()) {//hasmoreTokenze와 같음 다음데이터가 있습니까?(boolean)
 			String key = it.next();
 			System.out.println(key);
 			System.out.println(map.get(key));
+			
 		}
 		
 
