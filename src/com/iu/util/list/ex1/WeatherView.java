@@ -16,14 +16,14 @@ public class WeatherView {
 	}
 	
 	public void view(CityDTO cDto) {
-		System.out.println("지역은 : "+cDto.getName());
-		System.out.println("기온은 : "+cDto.getGion());
-		System.out.println("습도는 : "+cDto.getHum());
-		System.out.println("상태는 : "+cDto.getStatus());
+			System.out.println("지역은 : "+cDto.getName());
+			System.out.println("기온은 : "+cDto.getGion());
+			System.out.println("습도는 : "+cDto.getHum());
+			System.out.println("상태는 : "+cDto.getStatus());
 	}
 	
 	public void view(String message) {
-		
+				System.out.println(message);
 	}
 	
 }
