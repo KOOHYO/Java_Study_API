@@ -13,15 +13,15 @@ public class IOMain1 {
 		InputStream is = System.in;//byte를 처리하는곳 키보드로 받는다
 		InputStreamReader ir = new InputStreamReader(is);//한글자로 바꾼다
 		BufferedReader br = new BufferedReader(ir);//키보드랑 연결이 되었다! 버퍼에 저장!
+		System.out.println("키보드에서 입력 후 엔터");
+		String msg ="";
 		try {
-			System.out.println("키보드에서 입력 후 엔터");
-			String msg = br.readLine();
-			System.out.println(msg);
+			msg = br.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		System.out.println(msg);
 		
 
 	}

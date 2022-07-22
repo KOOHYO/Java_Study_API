@@ -14,12 +14,12 @@ public class Test {
 		int num4 = num - num2;//음수가뜬다 에러
 		
 		if(99<num3) {
-			throw new MyException();//처리를 해야지 왜 안하고있어,트라이 캣치를 쓰든지, 던져버리든지
+			throw new Exception();//처리를 해야지 왜 안하고있어,트라이 캣치를 쓰든지, 던져버리든지
 			//throw new Exception(); 기존의 Exception객체를 만들어도 된다/비번 틀렸다, 락걸려서 안됀다 등.. 에 쓰임
 		}
 		
 		if(num4<0) {
-//			throw new MyException("그런 숫자 몰라요");
+			throw new Exception("그런 숫자 몰라요");
 		}
 		
 		

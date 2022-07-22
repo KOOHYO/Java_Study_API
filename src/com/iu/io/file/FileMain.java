@@ -26,6 +26,23 @@ public class FileMain {
 		System.out.println(path.exists());//존재합니까?
 		System.out.println(path.isFile());//파일입니까?
 		System.out.println(path.isDirectory());//폴더입니까?
+		
+		//확장자가 없으면 폴더임
+		file = new File("C:\\Study\\sub");
+		if(!file.exists()) {
+			file.mkdir();
+		}
+		
+		File file2 = new File("C:\\Study\\sub2\\t1");
+		//file.mkdir(); 중간에 폴더(sub2)가 없으면 생성이 안됀다.
+		file2.mkdirs();
+		
+		//file.delete();
+		//file.delete();
+		//file2.delete(); 폴더를 지울때는 내부가 비어있어야한다
+		
+		File file3 = new File("C:\\Study\\sub2");
+		file3.delete();//안지워짐 왜? 폴더를 지울때는 안에 아무것도 없어야함 sub2안에는 t1이 존재하기 때문에 지워지지 않는다.
 
 	}
 

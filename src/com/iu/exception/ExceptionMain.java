@@ -7,7 +7,7 @@ public class ExceptionMain {
 		System.out.println("메인 시작");
 		Test test = new Test();
 		
-//		test.t4();
+		test.t3();
 		System.out.println("메인 종료");
 		
 	}
