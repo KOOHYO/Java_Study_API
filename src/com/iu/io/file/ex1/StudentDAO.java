@@ -11,6 +11,16 @@ public class StudentDAO {
 	//DAO : Data Access Object  읽어오거나 쓸려고 한다.
 	// file data에 접근
 	
+	//2. setList
+	public int setList(ArrayList<StudentDTO> ar) {
+		//예외처리는 내부에서 처리하고(여기서만)
+		//List로 받은 데이터들을 studentData에다가 작성
+		//기존의 내용은 삭제 (덮어 씌우는것)
+		//작성 형식은 기존 내용의 형식과 동일하게
+		//1을 리턴 : 정상적인 성공
+		//0을 리턴 : 예외가 발생 했을 경우
+	}
+	
 	//1. getList 메서드
 	//   studentData 파일의 내용을 읽어서 작업 4명의 정보를 DTO에 담아야한다
 	
