@@ -1,6 +1,6 @@
 package com.iu.io.file.ex1;
 
-public class StudentDTO {
+public class StudentDTO implements Service{
 
 	private String name;
 	private int num;

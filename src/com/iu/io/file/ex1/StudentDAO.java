@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class StudentDAO {
+public class StudentDAO implements Service{
 	//DTO : Data Transfer Object 
 	//DAO : Data Access Object  읽어오거나 쓸려고 한다.
 	// file data에 접근

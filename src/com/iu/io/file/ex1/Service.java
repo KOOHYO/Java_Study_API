@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public interface Service {
 	
+	//클래스를 하나 만들어서 인터페이스를 구현한 후 해야한다
+	
 	//StudentDAO에서 getList를 호출하고 총점과 평균을 각각
 	//계산해서 대입하고 그 List를 리턴
 	public ArrayList<StudentDTO> getlist() throws Exception;
